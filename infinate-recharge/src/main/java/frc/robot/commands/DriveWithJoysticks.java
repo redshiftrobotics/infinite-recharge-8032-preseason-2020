@@ -10,32 +10,33 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-/**
- * An example command.  You can replace me with your own command.
- */
 public class DriveWithJoysticks extends Command {
 
-
-
+	// Constructor
 	public DriveWithJoysticks() {
-    	// Use requires() here to declare subsystem dependencies
+		// Use requires() here to declare subsystem dependencies
 		requires(Robot.m_driveTrainSubsystem);
 	}
 
-	protected void initialize(){
-		
+	@Override
+	protected void initialize() {
+		// Code...
 	}
 
-	protected void excecute(){
+	@Override
+	protected void execute() {
+		// Drives the robot with left speed and right speed
 		Robot.m_driveTrainSubsystem.differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed(), Robot.m_oi.getRightSpeed());
 	}
 
-	protected void end(){
-		
+	@Override
+	protected void end() {
+		// Code...
 	}
 
-	protected void interrupted(){
-
+	@Override
+	protected void interrupted() {
+		// Code...
 	}
 
 	@Override
@@ -43,5 +44,4 @@ public class DriveWithJoysticks extends Command {
 		// TODO Auto-generated method stub
 		return false;
 	}
-  
 }
