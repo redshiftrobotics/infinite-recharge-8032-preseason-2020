@@ -24,7 +24,7 @@ import frc.robot.subsystems.DriveTrain;
 public class Robot extends TimedRobot {
 	// Create new instance of the drive train subsystem
 	public static DriveTrain m_driveTrainSubsystem = new DriveTrain();
-	// Create new instance
+	// Create new instance of the Operator Interface
 	public static OI m_oi;
 
 	// Create the base autonomous command

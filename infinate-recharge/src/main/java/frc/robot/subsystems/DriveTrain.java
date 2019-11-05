@@ -20,6 +20,7 @@ public class DriveTrain extends Subsystem {
 	// Initialize differential drive
 	public DifferentialDrive differentialDrive = new DifferentialDrive(m_left, m_right);
 
+
 	public void initDefaultCommand() {
 		// Do shit
 		// Maybe?
