@@ -8,17 +8,34 @@ import frc.robot.RobotMap;
 public class DriveTrain extends Subsystem {
 
 	// Left motor group
-	Talon m_frontLeft = new Talon(RobotMap.m_frontLeft);
-	Talon m_rearLeft = new Talon(RobotMap.m_rearLeft);
-	SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
+	Talon m_frontLeft = null;
+	Talon m_rearLeft = null;
+	SpeedControllerGroup m_left = null;
 
 	// Right motor group
-	Talon m_frontRight = new Talon(RobotMap.m_frontRight);
-	Talon m_rearRight = new Talon(RobotMap.m_rearRight);
-	SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
+	Talon m_frontRight = null;
+	Talon m_rearRight = null;
+	SpeedControllerGroup m_right = null;
 
 	// Initialize differential drive
-	public DifferentialDrive differentialDrive = new DifferentialDrive(m_left, m_right);
+	public DifferentialDrive differentialDrive = null;
+
+
+	public DriveTrain(){
+
+		// Left motor group
+		m_frontLeft = new Talon(RobotMap.m_frontLeft);
+		m_rearLeft = new Talon(RobotMap.m_rearLeft);
+		m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
+
+		// Right motor group
+		m_frontRight = new Talon(RobotMap.m_frontRight);
+		m_rearRight = new Talon(RobotMap.m_rearRight);
+		m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
+
+		// Initialize differential drive
+		differentialDrive = new DifferentialDrive(m_left, m_right);
+	}
 
 
 	public void initDefaultCommand() {
