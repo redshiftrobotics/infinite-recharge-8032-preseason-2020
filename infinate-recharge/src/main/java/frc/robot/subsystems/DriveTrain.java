@@ -38,7 +38,7 @@ public class DriveTrain extends Subsystem {
 		differentialDrive = new DifferentialDrive(m_left, m_right);
 	}
 
-
+	@Override
 	public void initDefaultCommand() {
 		setDefaultCommand(new DriveWithJoysticks());
 	}

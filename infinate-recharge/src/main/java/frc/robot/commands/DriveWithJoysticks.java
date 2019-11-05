@@ -15,7 +15,7 @@ public class DriveWithJoysticks extends Command {
 	// Constructor
 	public DriveWithJoysticks() {
 		// Use requires() here to declare subsystem dependencies
-		requires(Robot.m_driveTrainSubsystem);
+		requires(Robot.m_drivetrain);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class DriveWithJoysticks extends Command {
 	@Override
 	protected void execute() {
 		// Drives the robot with left speed and right speed
-		Robot.m_driveTrainSubsystem.differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed(), Robot.m_oi.getRightSpeed());
+		Robot.m_drivetrain.differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed(), Robot.m_oi.getRightSpeed());
 	}
 
 	@Override
@@ -41,7 +41,6 @@ public class DriveWithJoysticks extends Command {
 
 	@Override
 	protected boolean isFinished() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 }
