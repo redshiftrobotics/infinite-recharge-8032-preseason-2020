@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
+import frc.robot.commands.DriveWithJoysticks;
 
 public class DriveTrain extends Subsystem {
 
@@ -39,7 +40,6 @@ public class DriveTrain extends Subsystem {
 
 
 	public void initDefaultCommand() {
-		// Do shit
-		// Maybe?
+		setDefaultCommand(new DriveWithJoysticks());
 	}
 }
