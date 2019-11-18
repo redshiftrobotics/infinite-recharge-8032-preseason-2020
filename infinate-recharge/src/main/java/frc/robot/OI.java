@@ -15,7 +15,7 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class OI {
 	// The one joystick
-	Joystick joystick = new Joystick(1);
+	Joystick joystick = new Joystick(0);
 
 	// Gets the left power from the joystick
 	public double getLeftSpeed() {
