@@ -26,7 +26,8 @@ public class DriveWithJoysticks extends Command {
 	@Override
 	protected void execute() {
 		// Drives the robot with left speed and right speed
-		Robot.m_drivetrain.differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed(), Robot.m_oi.getRightSpeed());
+		Robot.m_drivetrain.Drive();
+		System.out.println("Test");
 	}
 
 	@Override

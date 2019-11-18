@@ -3,10 +3,11 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import frc.robot.Robot;
 import frc.robot.RobotMap;
 import frc.robot.commands.DriveWithJoysticks;
 
-public class DriveTrain extends Subsystem {
+public class DriveTrain extends Subsystem {	
 
 	// Left motor group
 	Talon m_frontLeft = null;
@@ -36,6 +37,10 @@ public class DriveTrain extends Subsystem {
 
 		// Initialize differential drive
 		differentialDrive = new DifferentialDrive(m_left, m_right);
+	}
+
+	public void Drive() {
+		differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed(), Robot.m_oi.getRightSpeed());
 	}
 
 	@Override
