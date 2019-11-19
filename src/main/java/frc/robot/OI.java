@@ -24,6 +24,6 @@ public class OI {
 
 	// Gets the left power from the joystick
 	public double getRightSpeed() {
-		return joystick.getRawAxis(2);
+		return joystick.getRawAxis(3);
 	}
 }

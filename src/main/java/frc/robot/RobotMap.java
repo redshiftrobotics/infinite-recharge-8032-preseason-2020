@@ -16,8 +16,8 @@ package frc.robot;
 public class RobotMap {
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
-	public static int m_frontLeft 	= 0;
-	public static int m_frontRight 	= 1;
-	public static int m_rearLeft 	= 2;
-	public static int m_rearRight 	= 3;
+	public static int m_frontLeft 	= 2;
+	public static int m_frontRight 	= 3;
+	public static int m_rearLeft 	= 0;
+	public static int m_rearRight 	= 1;
 }

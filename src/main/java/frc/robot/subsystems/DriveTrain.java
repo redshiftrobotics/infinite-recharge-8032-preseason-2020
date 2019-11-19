@@ -9,6 +9,9 @@ import frc.robot.commands.DriveWithJoysticks;
 
 public class DriveTrain extends Subsystem {	
 
+	// Master speed
+	double m_speed = -1;
+
 	// Left motor group
 	Talon m_frontLeft = null;
 	Talon m_rearLeft = null;
@@ -22,8 +25,7 @@ public class DriveTrain extends Subsystem {
 	// Initialize differential drive
 	public DifferentialDrive differentialDrive = null;
 
-
-	public DriveTrain(){
+	public DriveTrain() {
 
 		// Left motor group
 		m_frontLeft = new Talon(RobotMap.m_frontLeft);
@@ -40,7 +42,7 @@ public class DriveTrain extends Subsystem {
 	}
 
 	public void Drive() {
-		differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed(), Robot.m_oi.getRightSpeed());
+		differentialDrive.tankDrive(Robot.m_oi.getLeftSpeed() * m_speed, Robot.m_oi.getRightSpeed() * m_speed);
 	}
 
 	@Override

@@ -27,7 +27,6 @@ public class DriveWithJoysticks extends Command {
 	protected void execute() {
 		// Drives the robot with left speed and right speed
 		Robot.m_drivetrain.Drive();
-		System.out.println("Test");
 	}
 
 	@Override
