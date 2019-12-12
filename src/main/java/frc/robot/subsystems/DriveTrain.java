@@ -10,7 +10,7 @@ import frc.robot.commands.DriveWithJoysticks;
 public class DriveTrain extends Subsystem {	
 
 	// Master speed
-	double m_speed = -1;
+	double m_speed = -0.5;
 
 	// Left motor group
 	Talon m_frontLeft = null;
